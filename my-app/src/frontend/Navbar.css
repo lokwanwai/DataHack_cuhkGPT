@@ -1,0 +1,24 @@
+.Navbar{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+.Logo{
+
+}
+
+.Navbar .btn{
+    height: 10vh;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-top: 5px;
+}
+
+.Navbar .btn:hover{
+    background-color: #444;
+}
+
