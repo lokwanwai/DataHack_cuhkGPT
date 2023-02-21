@@ -1,0 +1,48 @@
+.userbar{
+    display: flex;
+}
+
+.square{
+margin: 0 2vw;
+}
+
+.userbar h1{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 170%;
+    /* identical to box height, or 26px */
+    text-align: center;
+    color: #1075E8;
+}
+
+.userbar .btn{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    /* identical to box height, or 26px */
+    background-color: white;
+    border: none;
+    text-align: center;
+    color: #1DA0A8;
+    margin-left: auto;
+    cursor: grab;
+}
+
+.search{
+    margin-left: 5vw;
+    display: flex;
+    gap: 5vw;
+}
+
+.search label{
+    margin-right: 1vw;
+}
+
+.search input{
+    background: #F2F2F2;
+    border-radius: 30px;
+}
+
+.search_icon{
+    margin-right: 1vw;
+}

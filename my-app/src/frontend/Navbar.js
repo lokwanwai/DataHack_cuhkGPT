@@ -6,12 +6,24 @@ import {faYoutube} from '@fortawesome/free-brands-svg-icons'
 import Logo from './images/Logo.svg'
 
 const Navbar = () =>{
-    const number = ['Business Management', 
-                    'Market Analyze', 
-                    'Market Trace', 
-                    4, 5,6]; //input your data
+    const items = [
+        {
+            "text": "Business Management",
+        },
+        {
+            "text": "Market Analyze",
+        },
+        {
+            "text": "Market Trace",
+        },
+        {
+            "text": "",
+        }
+    ]; //input your data
 
-    const listitems = number.map(number => <button className='btn'>{number}</button>);
+    const listitems = items.map(
+        item => <button className='btn'>{item.text}</button>
+        );
 
     return(
         <div className='Navbar'>
