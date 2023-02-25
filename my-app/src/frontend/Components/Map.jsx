@@ -1,7 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import React from "react";
-//import "leaflet/dist/leaflet.css";
-import icon from "../images/Logo.svg";
+import icon from "../images/chatgpt.svg";
 import L from "leaflet";
 
 export default function Map({ coords, display_name }) {

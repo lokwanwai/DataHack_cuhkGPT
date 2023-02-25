@@ -66,60 +66,17 @@ export default function MapContainer() {
     };
   }
 
-  //send the data on the state to the API
-  function getData(url) {
-    fetch(url, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Access-Control-Allow-Origin": "https://o2cj2q.csb.app"
-      }
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-      })
-      .then((data) => {
-        setName(data[0].display_name);
-        setCorrds({
-          latitude: data[0].lat,
-          longitude: data[0].lon
-        });
-      })
-      .catch(() => error("Please Check your input"));
-  }
-
-  //set form input( data entered ) to state on form submit
-  function submitHandler(e) {
-    e.preventDefault();
-    console.log(address);
-
-    let url = `https://nominatim.openstreetmap.org/search?
-    street=${address.street}
-    &city=${address.city}
-    &state=${address.state}
-    &country=${address.country}
-    &postalcode=${address.postalcode}&format=json`;
-
-    getData(url);
-  }
-
   return (
     <div className="mapcontainer">
       <h1>Current Business:</h1>
+
       <section className="form-container">
-      <div className='search'>
-            <div>
-            <label for="revenue"><Search className='search_icon'/>Search By Revenue :</label>
-            <input type="text" id="revenue" value={address.revenue} onChange={update('revenue')}name="firstname" placeholder=""/>
-            </div>
-            <div>
-            <label for="location"><Search className='search_icon'/>Search By Location :</label>
-            <input type="text" id="location" value={address.location} onChange={update('location')} name="firstname" placeholder=""/>
-            </div>
-            </div>
+      <form>
+          <label for="location"><Search className='search_icon'/>Search By Location :</label>
+          <input type="text" id="location" value={address.location} onChange={update('location')} name="firstname" placeholder=""/>
+      </form>
       </section>
+
       <Map coords={coords} dispaly_name={display_name} />
     </div>
   );

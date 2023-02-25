@@ -9,21 +9,27 @@
     color: #1DA0A8;
 }
 
-.search{
+.form-container{
     margin-left: 5vw;
     display: flex;
-    gap: 5vw;
+    gap: 1vw;
 }
 
-.search label{
+.form-container label{
     margin-right: 1vw;
 }
 
-.search input{
+.form-container input{
     background: #F2F2F2;
     border-radius: 30px;
 }
 
 .search_icon{
     margin-right: 1vw;
+}
+/*open street map style*/
+.leaflet-container{
+    width: 100%;
+    height: 80vh;
+    margin-top: 2%;
 }
